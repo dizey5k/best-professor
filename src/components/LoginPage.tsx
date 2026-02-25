@@ -114,7 +114,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
       </div>
       <div className="overlay">
         <div className="text">
-          <h1>Конкурс Лучший Преподаватель</h1>
+          <h1 className="h1">Конкурс Лучший Преподаватель</h1>
         </div>
         <div className="loginContainer">
           <h1>Вход в систему</h1>

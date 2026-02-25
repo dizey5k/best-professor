@@ -40,17 +40,17 @@
     transform: rotate(45deg);
   }
 
+  .photo {
+    img {
+      width: 400px;
+      border-radius: 15px;
+    }
+  }
+
   .expandedContent {
     display: flex;
     gap: 20px;
     width: 100%;
-
-    .photo {
-      img {
-        width: 400px;
-        border-radius: 15px;
-      }
-    }
 
     .info {
       display: flex;
@@ -63,7 +63,9 @@
       }
 
       .votedList {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
         padding-top: 10px;
         gap: 10px;
         strong {
@@ -73,13 +75,13 @@
         }
 
         .votedItem {
+          display: flex;
           padding: 6px 12px;
           background-color: transparent;
           border-radius: 20px;
           color: #104e47;
           font-weight: 500;
           border: 1px solid #104e47;
-          width: fit-content;
         }
       }
 
@@ -96,6 +98,30 @@
 
         &:hover {
           background-color: #7da57f;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .expandedContent {
+      flex-direction: column;
+    }
+
+    .photo {
+      img {
+        width: 100%;
+        border-radius: 15px;
+      }
+    }
+
+    .expandedContent {
+      .info {
+        gap: 30px;
+
+        .votedList {
+          display: flex;
+          flex-direction: column;
         }
       }
     }

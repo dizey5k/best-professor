@@ -91,7 +91,10 @@ const VotingModal: React.FC<VotingModalProps> = ({
                     className={`teacherItem ${selected.includes(t.id) ? "selected" : ""}`}
                   >
                     <label>
-                      {`${t.lastName} ${t.firstName} ${t.patronymic} `}
+                      <div className="">
+                        {`${t.lastName} ${t.firstName} ${t.patronymic} `}
+                        <span className="teacherPosition">{t.position}</span>
+                      </div>
                       <input
                         type="checkbox"
                         checked={selected.includes(t.id)}
