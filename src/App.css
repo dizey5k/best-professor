@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  width: 100%;
+}
+
+.headerLogo {
+  width: 100px;
+}

@@ -1,0 +1,70 @@
+.headerHero {
+  display: flex;
+  width: 100%;
+  padding: 20px 0 0 0;
+  justify-content: space-between;
+
+  .headerLogo {
+    width: 200px;
+  }
+
+  .logoutButton {
+    background-color: #193835;
+    color: white;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #5d8b5f;
+      border-color: white;
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-image: url("/hero.png");
+  min-height: 400px;
+  padding: 0 40px 40px;
+  color: #fff;
+  position: relative;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 20px;
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  .right {
+    width: 50%;
+    align-self: flex-end;
+    text-align: right;
+
+    p {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+    align-items: stretch;
+
+    .left,
+    .right {
+      width: 100%;
+      margin-top: 20px;
+      align-self: auto;
+    }
+  }
+}
